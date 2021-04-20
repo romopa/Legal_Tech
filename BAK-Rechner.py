@@ -9,9 +9,12 @@ geschlecht = input("Ist die getestete Person ein Mann oder eine Frau? (M oder F)
 if geschlecht == "M":
     reduktionsfaktor=float(0.7)
     geschlecht_name = "Mann"
-else:
+elif geschlecht == "F":
     reduktionsfaktor=float(0.6)
     geschlecht_name = "Frau"
+else:
+    print("Fehlerhafte Eingabe, bitte starten Sie das Programm erneut")
+    quit()  # Beendet laufendes Programm
 bak = (masse_alkohol)/(gewicht_der_person*reduktionsfaktor)
 bak_round = round(bak, 3)
 print("")
