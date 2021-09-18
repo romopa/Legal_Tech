@@ -2,24 +2,24 @@
 
 def GeldBetrag(text:str)->float:                                                # ->float als Typehint, welches Ergebnis ausgespuckt werden soll
     "Validiere Geldbeträge mit Frage text"
-                                                                                # gueltig:boolean=False
-  while True:                                                                   # Alternative: "not gueltig:"
-    wert=input(text)
-    try:
-      eingabe=float(wert)
-      if(eingabe<0): 
-        print("Bitte eine positive Zahl eingeben.")
-                                                                                # break <- damit wird die Schleife beendet 
-      else:
-        if(round(eingabe,2)!=eingabe): 
-          print("Bitte maximal zwei Nachkommastellen eingeben.")                # Eingabe negativ? -> Fehlermeldung
-        else:
-          break
+                                                                                # gueltig boolean=False
+    while True:                                                                   # Alternative "not gueltig"
+        wert=input(text)
+        try:
+            eingabe=float(wert)
+            if(eingabe<0): 
+                print("Bitte eine positive Zahl eingeben.")
+                                                                                    # break <- damit wird die Schleife beendet 
+            else:
+                if(round(eingabe,2)!=eingabe): 
+                    print("Bitte maximal zwei Nachkommastellen eingeben.")                # Eingabe negativ? -> Fehlermeldung
+                else:
+                    break
                                                                                 # gueltig = True
-    except:
-      print("Bitte geben Sie eine Kommazahl ein")
+        except:
+            print("Bitte geben Sie eine Kommazahl ein")
                                                                                 # Rückgabewert -> muss ein Float-Wert sein (= Kommawert)
-  return eingabe
+    return eingabe
 
 # Kaufpreis muss > 0 sein
 Kaufpreis:float=-1
