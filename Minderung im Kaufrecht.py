@@ -1,4 +1,5 @@
 # Minderung im Kaufrecht
+# (C) Moritz Rowold
 
 def GeldBetrag(text:str)->float:                                                # ->float als Typehint, welches Ergebnis ausgespuckt werden soll
     "Validiere Geldbeträge mit Frage text"
